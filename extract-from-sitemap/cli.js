@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-const { spawn } = require("child_process");
-const crypto = require("crypto");
-const http = require("http");
-const { URL, URLSearchParams } = require("url");
-const os = require("os");
-const { processLLMTextConfig } = require("./mod.js");
+import fs from "fs";
+import path from "path";
+import { spawn } from "child_process";
+import crypto from "crypto";
+import http from "http";
+import { URL, URLSearchParams } from "url";
+import os from "os";
+import { processLLMTextConfig } from "./mod.js";
 
 const CREDENTIALS_DIR = path.join(os.homedir(), ".llmtext");
 const API_KEY_FILE = path.join(CREDENTIALS_DIR, "api-key");
@@ -527,15 +527,5 @@ async function main() {
   }
 }
 
-// Run main function if this file is executed directly
-if (require.main === module) {
-  main();
-}
-
-module.exports = {
-  OAuth,
-  loadConfig,
-  getApiKey,
-  clearCredentials,
-  main,
-};
+// Run main function
+main();

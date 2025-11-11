@@ -1,0 +1,15 @@
+{
+    "$schema": "https://raw.githubusercontent.com/janwilmake/extract-from-sitemap/main/llmtext.schema.json",
+    "title": "Bitti Gitti Corporate Documentation",
+    "description": "Documentation extracted from Bitti Gitti corporate website",
+    "outDir": "./docs",
+    "sources": [
+      {
+        "title": "Bitti Gitti Corporate",
+        "origin": "https://kurumsal.bitti-gitti.com",
+        "outDir": "./docs/bitti-gitti",
+        "forceExtract": false,
+        "keepOriginalUrls": false
+      }
+    ]
+  }
